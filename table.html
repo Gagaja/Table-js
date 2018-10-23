@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background: #bfdad2;
+        }
+
+     h2{
+            font-size: 40px;
+            color: red;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .table {
+            border-bottom: 2px solid darkgrey;
+        }
+
+        table {
+            margin:0 auto 40px;
+            border-collapse: collapse;
+            }
+          
+       
+
+        #table1 td{
+
+            width: 70px;
+            height: 70px;
+            border: 2px solid red;
+            text-align: center;
+            color: #1900ff;
+            font-size: 22px;
+        }
+
+        #table1 td:hover {
+            background: #5c5cff;
+            color: #fff;
+            
+        }
+
+        #table2 td {
+
+            width: 70px;
+            height: 70px;
+            border: 2px solid blue;
+            text-align: center;
+            color: red;
+            font-size: 22px;
+        }
+
+        #table2 td:hover {
+            background: #ff4646;
+            color: #fff;
+            
+        }
+
+        .second h2 {
+            color: #1900ff;
+        }
+
+        .third h2 {
+            color: green;
+        }
+
+        #table-section td {
+
+            width: 70px;
+            height: 70px;
+            border: 2px solid green;
+            text-align: center;
+            color: #ff8a3c;
+            font-size: 22px;
+        }
+
+        #table-section td:hover {
+            background: #ff6600;
+            color: #fff;
+            
+        }
+
+        #table-one {
+            margin: auto;
+        }
+    </style>
+
+
+    <div class="table">
+
+        <h2>Table</h2>
+
+        <div id="table-out">
+            <table id="table1"></table>
+        </div>
+
+    
+    </div>
+
+    <div class="table second">
+
+        <h2>Table 2</h2>
+
+
+        <div id="table-out2">
+            <table id="table2"></table>
+        </div>
+
+
+
+    </div>
+    <div class="table third">
+
+        <h2>Table 3</h2>
+
+
+        <div id="table-one">
+          <table id="table-section"></table>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        document.getElementById("table1")
+        var table = "";
+        var rows = "";
+        var cols = "";
+        for (i = 0; i < 4; i++) {
+            table += '<tr>';
+            for (j = 0; j < 8; j++) {
+                table += '<td>' + j + '</td>';
+
+            }
+            table += '</tr>';
+
+
+        }
+        document.getElementById("table1").innerHTML = "<table>" + table + "</table>";
+
+        document.getElementById("table2")
+        var table = "";
+        var rows = 4;
+        var cols = 8;
+        for (i = 0; i < rows; i++) {
+            table += '<tr>';
+            for (j = 0; j < cols; j++) {
+                table += '<td>' + j + '</td>';
+
+            }
+            table += '</tr>';
+
+        }
+        document.getElementById("table2").innerHTML = "<table>" + table + "</table>";
+
+        document.getElementById("table-one")
+        var row = "";
+        var col = "";
+        var table = "";
+
+
+        for (i = 0; i < 4; i++) {
+            for (j = 0; j < 8; j++) {
+                col = col + "<td>" + j + "</td>"
+            }
+            row = "<tr>" + col + "</tr>";
+            table = table + row;
+            col = "";
+            row = "";
+            document.getElementById("table-section").innerHTML = table;
+            ;
+
+
+
+        };
+
+
+    </script>
+
+</body>
+
+</html>
